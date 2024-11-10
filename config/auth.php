@@ -12,17 +12,18 @@ return [
     | checks on and edit/retrieve users from.
     |
     */
-    'DB_TABLE' => 'users',
+    'db.table' => 'users',
 
     /*
     |--------------------------------------------------------------------------
-    | Use session
+    | ID Key
     |--------------------------------------------------------------------------
     |
-    | Use session based authentication instead of the default JWT based auth.
+    |  Set your primary key name. For instance, you might have used id_user instead of id.
+    |  This setting allows you to quickly switch your key name
     |
     */
-    'USE_SESSION' => true,
+    'id.key' => 'id',
 
     /*
     |--------------------------------------------------------------------------
@@ -33,7 +34,7 @@ return [
     | and update methods
     |
     */
-    'USE_TIMESTAMPS' => true,
+    'timestamps' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -44,7 +45,7 @@ return [
     | Be aware that auth uses the leafs/date module, so the accepted formats are listed in the leafs/date documentation
     |
     */
-    'TIMESTAMP_FORMAT' => 'c',
+    'timestamps.format' => 'YYYY-MM-DD HH:mm:ss',
 
     /*
     |--------------------------------------------------------------------------
@@ -58,7 +59,7 @@ return [
     | You can set your own implementation instead of Password::hash
     |
     */
-    'PASSWORD_ENCODE' => function ($password) {
+    'password.encode' => function ($password) {
         return Password::hash($password);
     },
 
@@ -73,7 +74,7 @@ return [
     | You can add your own implementation instead of Password::verify
     |
     */
-    'PASSWORD_VERIFY' => function ($password, $hashedPassword) {
+    'password.verify' => function ($password, $hashedPassword) {
         return Password::verify($password, $hashedPassword);
     },
 
@@ -86,93 +87,39 @@ return [
     | in your database.
     |
     */
-    'PASSWORD_KEY' => 'password',
+    'password.key' => 'password',
 
     /*
     |--------------------------------------------------------------------------
-    | ID Key
+    | Unique fields
     |--------------------------------------------------------------------------
     |
-    |  Set your primary key name. For instance, you might have used id_user instead of id.
-    |  This setting allows you to quickly switch your key name
+    | This is a list of items that should be unique to each user eg: email
     |
     */
-    'ID_KEY' => 'id',
+    'unique' => ['email'],
 
     /*
     |--------------------------------------------------------------------------
-    | Hide id
+    | Hidden fields
     |--------------------------------------------------------------------------
     |
-    | Hide id field from user object returned in login, register and update
+    | This is a list of items that should be hidden when
+    | a user object is returned. You should use the field name
+    | exactly as it is in the database.
     |
     */
-    'HIDE_ID' => true,
+    'hidden' => ['field.id', 'field.password'],
 
     /*
     |--------------------------------------------------------------------------
-    | Hide password
+    | Use session
     |--------------------------------------------------------------------------
     |
-    | Hide password from user object returned in login, register and update
+    | Use session based authentication instead of the default JWT based auth.
     |
     */
-    'HIDE_PASSWORD' => true,
-
-    /*
-    |--------------------------------------------------------------------------
-    | Login params error
-    |--------------------------------------------------------------------------
-    |
-    | Error to show when the login params aren't found in db
-    |
-    */
-    'LOGIN_PARAMS_ERROR' => 'Username not registered!',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Password error
-    |--------------------------------------------------------------------------
-    |
-    | Error to show when the login password is wrong
-    |
-    */
-    'LOGIN_PASSWORD_ERROR' => 'Password is incorrect!',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Session on register
-    |--------------------------------------------------------------------------
-    |
-    | If true, a session will be created on a successful registration, else
-    | you it'll be created on login rather.
-    |
-    */
-    'SESSION_ON_REGISTER' => false,
-
-    /*
-    |--------------------------------------------------------------------------
-    | Session redirect on login
-    |--------------------------------------------------------------------------
-    |
-    | When set to true, the options set in GUARD_LOGIN, GUARD_REGISTER and GUARD_HOME
-    | will be used to redirect the user to the right page based on their state.
-    | Set to false to not redirect on login
-    |
-    */
-    'SESSION_REDIRECT_ON_LOGIN' => true,
-
-    /*
-    |--------------------------------------------------------------------------
-    | Session redirect on register
-    |--------------------------------------------------------------------------
-    |
-    | When set to true, the options set in GUARD_LOGIN, GUARD_REGISTER and GUARD_HOME
-    | will be used to redirect the user to the right page based on their state.
-    | Set to false to not redirect on login
-    |
-    */
-    'SESSION_REDIRECT_ON_REGISTER' => true,
+    'session' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -181,68 +128,10 @@ return [
     |
     | Set the lifetime of the session. After this time, the session will expire and the user will have to login again.
     | You can either use '1 day' format or as an integer: 86400
-    | You can also set SESSION_LIFETIME to 0 to disable session expiration.
+    | You can also set session.lifetime to 0 to disable session expiration.
     |
     */
-    'SESSION_LIFETIME' => 60 * 60 * 24,
-
-    /*
-    |--------------------------------------------------------------------------
-    | Login page route
-    |--------------------------------------------------------------------------
-    */
-    'GUARD_LOGIN' => '/auth/login',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Register page route
-    |--------------------------------------------------------------------------
-    */
-    'GUARD_REGISTER' => '/auth/register',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Logout route
-    |--------------------------------------------------------------------------
-    */
-    'GUARD_LOGOUT' => '/auth/logout',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Home page route
-    |--------------------------------------------------------------------------
-    */
-    'GUARD_HOME' => '/home',
-
-    /*
-    |--------------------------------------------------------------------------
-    | JWT + Session
-    |--------------------------------------------------------------------------
-    |
-    | Add an auth token to the auth session
-    |
-    */
-    'SAVE_SESSION_JWT' => false,
-
-    /*
-    |--------------------------------------------------------------------------
-    | JWT Token Secret
-    |--------------------------------------------------------------------------
-    |
-    | Secret string to encode JWT
-    |
-    */
-    'TOKEN_SECRET' => '@_leaf$0Secret!',
-
-    /*
-    |--------------------------------------------------------------------------
-    | JWT Lifetime
-    |--------------------------------------------------------------------------
-    |
-    | How long should JWT be valid for?
-    |
-    */
-    'TOKEN_LIFETIME' => 60 * 60 * 24 * 365,
+    'session.lifetime' => 60 * 60 * 24,
 
     /*
     |--------------------------------------------------------------------------
@@ -259,5 +148,45 @@ return [
     |
     |
     */
-    'SESSION_COOKIE_PARAMS' => ['secure' => false, 'httponly' => true, 'samesite' => 'lax']
+    'session.cookie' => ['secure' => false, 'httponly' => true, 'samesite' => 'lax'],
+
+    /*
+    |--------------------------------------------------------------------------
+    | JWT Lifetime
+    |--------------------------------------------------------------------------
+    |
+    | How long should JWT be valid for?
+    |
+    */
+    'token.lifetime' => 60 * 60 * 24 * 365,
+
+    /*
+    |--------------------------------------------------------------------------
+    | JWT Token Secret
+    |--------------------------------------------------------------------------
+    |
+    | Secret string to encode JWT
+    |
+    */
+    'token.secret' => _env('TOKEN_SECRET', '@leaf$MVC*JWT#AUTH.Secret'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Login params error
+    |--------------------------------------------------------------------------
+    |
+    | Error to show when the login params aren't found in db
+    |
+    */
+    'messages.loginParamsError' => 'Incorrect credentials!',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Password error
+    |--------------------------------------------------------------------------
+    |
+    | Error to show when the login password is wrong
+    |
+    */
+    'messages.loginPasswordError' => 'Password is incorrect!',
 ];
