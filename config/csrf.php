@@ -3,6 +3,18 @@
 return [
     /*
     |--------------------------------------------------------------------------
+    | Enable/Disable CSRF Protection
+    |--------------------------------------------------------------------------
+    |
+    | Leaf will automatically generate a CSRF token for each active
+    | session. We still allow you to manually enable or disable
+    | CSRF protection for your app by uncommenting the line below.
+    |
+    */
+    // 'enabled' => true,
+
+    /*
+    |--------------------------------------------------------------------------
     | Secret
     |--------------------------------------------------------------------------
     |
