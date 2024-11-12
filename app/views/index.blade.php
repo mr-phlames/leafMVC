@@ -26,6 +26,8 @@
 </head>
 
 <body class="overflow-hidden">
+    {{-- @include('components.topnav') --}}
+
     <main class="flex flex-col justify-center items-center h-svh">
         <div class="flex flex-col justify-center items-center min-h-96 w-full max-w-[500px] bg-[url(/public/assets/img/eclipse.svg)] bg-cover pt-28">
             <h1 class="text-6xl font-light">Leaf MVC</h1>
