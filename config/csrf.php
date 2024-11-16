@@ -43,8 +43,15 @@ return [
     |
     | This is a list of routes that will be excluded from CSRF
     | verification. This is useful for APIs that need to bypass
-    | the CSRF verification. You can add route URIs or directly pass
-    | in dynamic routes like '/items/{id}' or '/items/(\d+)'.
+    | the CSRF verification.the csrf exempted routes routes can 
+    | be defined as
+    |    - directly i.e 'sample/route'
+    |    - predefined expressions i.e 'route/{int|slug|any|all}' 
+    |
+    | @expression {int}    - Integer values i.e order/{int} → order/10
+    | @expression {slug}   - Alphanumerical values i.e user/{slug} → user/janedoe98
+    | @expression {any}    - Every character except slashes (/) i.e blog/{any} → blog/hello-world-153
+    | @expression {wild}   - Every character including slashes i.e path/{wild} → path/any/file/path
     |
     */
     'except' => [],
