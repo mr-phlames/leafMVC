@@ -39,35 +39,4 @@ try {
 | your application.
 |
 */
-Leaf\Core::loadApplicationConfig();
-Leaf\Database::connect();
-
-/*
-|--------------------------------------------------------------------------
-| Initialise Leaf CMD
-|--------------------------------------------------------------------------
-|
-| Initialise aloe CLI
-|
-*/
-$console = new \Aloe\Console('Leaf MVC', 'v3.5.0');
-
-/*
-|--------------------------------------------------------------------------
-| Add commands
-|--------------------------------------------------------------------------
-|
-| Add custom commands
-|
-*/
-\App\Console\Commands::register($console);
-
-/*
-|--------------------------------------------------------------------------
-| Run The console Application
-|--------------------------------------------------------------------------
-|
-| Transport water and dissolved substances to the rest of Leaf😂
-|
-*/
-$console->run();
+Leaf\Core::loadConsole();

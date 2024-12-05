@@ -33,7 +33,7 @@
             <h1 class="text-6xl font-light">Leaf MVC</h1>
             <p class="text-lg mt-5">Lightweight MVC for humans</p>
         </div>
-        <p class="mt-16 mb-32 rounded-xl border border-[rgba(172,175,176,0.3)] py-3 px-8 [font-family:Berkeley_Mono]">Get started by editing<code class="text-[#5e79c7]"> app/views/index.blade.php</code></p>
+        <p class="mt-16 mb-32 rounded-xl border border-[rgba(172,175,176,0.3)] py-3 px-8">Get started by editing<code class="text-[#5e79c7]"> app/views/index.blade.php</code></p>
         <div class="flex gap-5">
             <a class="border border-slate-300 hover:border-slate-500 py-3 px-6 rounded-full" href="https://leafphp.dev/"
                 target="_blank">Leaf Docs</a>
