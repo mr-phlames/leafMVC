@@ -28,7 +28,7 @@
     "require": {
         "illuminate/console": "^8.75",
         "leafs/blade": "*",
-        "leafs/mvc-core": "*",
+        "leafs/mvc-core": "dev-main",
         "leafs/leaf": "^3.7",
         "leafs/csrf": "*",
         "leafs/logger": "*",
@@ -38,7 +38,7 @@
         "leafs/vite": "*",
         "leafs/form": "^3.0",
         "leafs/http": "^3.0",
-        "leafs/aloe": "^2.0"
+        "leafs/aloe": "v2.x-dev"
     },
     "require-dev": {
         "fakerphp/faker": "^1.16",

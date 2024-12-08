@@ -58,18 +58,6 @@ if (php_sapi_name() === 'cli-server') {
 
 /*
 |--------------------------------------------------------------------------
-| Attach blade view
-|--------------------------------------------------------------------------
-|
-| Since blade no longer ships with Leaf by default, we
-| can attach blade back to Leaf so you can use Leaf MVC
-| as you've always used it.
-|
-*/
-Leaf\Config::attachView(\Leaf\Blade::class);
-
-/*
-|--------------------------------------------------------------------------
 | Load Leaf configuration
 |--------------------------------------------------------------------------
 |

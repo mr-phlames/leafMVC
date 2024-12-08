@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "327a0be9182218a97e9b16d928004091",
+    "content-hash": "bd8666c285c17052911dc83f38c3a60d",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -1366,16 +1366,16 @@
         },
         {
             "name": "leafs/aloe",
-            "version": "2.1.1",
+            "version": "v2.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/leafsphp/aloe.git",
-                "reference": "3fbbcfdc669c371df956e1a45c1e0d02b305a538"
+                "reference": "a34602a686b713eebb0cb3de31bdcd32bebacfc4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/leafsphp/aloe/zipball/3fbbcfdc669c371df956e1a45c1e0d02b305a538",
-                "reference": "3fbbcfdc669c371df956e1a45c1e0d02b305a538",
+                "url": "https://api.github.com/repos/leafsphp/aloe/zipball/a34602a686b713eebb0cb3de31bdcd32bebacfc4",
+                "reference": "a34602a686b713eebb0cb3de31bdcd32bebacfc4",
                 "shasum": ""
             },
             "require": {
@@ -1389,6 +1389,7 @@
             "require-dev": {
                 "leafs/leaf": "*"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -1419,7 +1420,7 @@
             ],
             "support": {
                 "issues": "https://github.com/leafsphp/aloe/issues",
-                "source": "https://github.com/leafsphp/aloe/tree/v2.1.1"
+                "source": "https://github.com/leafsphp/aloe/tree/v2.x"
             },
             "funding": [
                 {
@@ -1431,7 +1432,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2024-12-01T15:48:01+00:00"
+            "time": "2024-12-08T20:11:51+00:00"
         },
         {
             "name": "leafs/anchor",
@@ -2298,16 +2299,16 @@
         },
         {
             "name": "leafs/mvc-core",
-            "version": "v1.9.0",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/leafsphp/mvc-core.git",
-                "reference": "6068df6ff3bbe80b6139e301562f2dbef49f18db"
+                "reference": "5cd3088dce98319d174fa48fabb5db13aca20c82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/leafsphp/mvc-core/zipball/6068df6ff3bbe80b6139e301562f2dbef49f18db",
-                "reference": "6068df6ff3bbe80b6139e301562f2dbef49f18db",
+                "url": "https://api.github.com/repos/leafsphp/mvc-core/zipball/5cd3088dce98319d174fa48fabb5db13aca20c82",
+                "reference": "5cd3088dce98319d174fa48fabb5db13aca20c82",
                 "shasum": ""
             },
             "require": {
@@ -2317,6 +2318,7 @@
                 "leafs/leaf": "*",
                 "vlucas/phpdotenv": "^5.4"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "files": [
@@ -2353,7 +2355,7 @@
             ],
             "support": {
                 "issues": "https://github.com/leafsphp/mvc-core/issues",
-                "source": "https://github.com/leafsphp/mvc-core/tree/v1.9.0"
+                "source": "https://github.com/leafsphp/mvc-core/tree/main"
             },
             "funding": [
                 {
@@ -2365,7 +2367,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2024-11-30T18:57:46+00:00"
+            "time": "2024-12-08T20:12:37+00:00"
         },
         {
             "name": "leafs/password",
@@ -4680,7 +4682,10 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {},
+    "stability-flags": {
+        "leafs/aloe": 20,
+        "leafs/mvc-core": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {},

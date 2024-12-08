@@ -30,13 +30,11 @@ try {
 
 /*
 |--------------------------------------------------------------------------
-| Load Leaf configuration
+| Boot Aloe Console
 |--------------------------------------------------------------------------
 |
-| Leaf MVC allows you to customize Leaf and it's modules using
-| configuration files defined in the config folder. This line
-| loads the configuration files and makes them available to
-| your application.
+| Automatically load your config, paths and commands,
+| and then run the console application.
 |
 */
 Leaf\Core::loadConsole();
