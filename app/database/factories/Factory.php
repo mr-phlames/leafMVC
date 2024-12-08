@@ -18,4 +18,7 @@ use Leaf\Factory as Base;
  */
 class Factory extends Base
 {
+    // You can define methods here that would be used
+    // throughout your factory classes
+    // public function someMethod() {}
 }
