@@ -1,6 +1,6 @@
 {
     "name": "leafs/mvc",
-    "version": "3.7",
+    "version": "3.8",
     "description": "A lightweight PHP MVC framework powered by Leaf",
     "type": "library",
     "keywords": [
@@ -28,7 +28,7 @@
     "require": {
         "illuminate/console": "^8.75",
         "leafs/blade": "*",
-        "leafs/mvc-core": "*",
+        "leafs/mvc-core": "^1.10",
         "leafs/leaf": "^3.7",
         "leafs/csrf": "*",
         "leafs/logger": "*",

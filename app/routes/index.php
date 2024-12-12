@@ -30,17 +30,6 @@
 
 /*
 |--------------------------------------------------------------------------
-| Set up Controller namespace
-|--------------------------------------------------------------------------
-|
-| This allows you to directly use controller names instead of typing
-| the controller namespace first.
-|
-*/
-app()->setNamespace('\App\Controllers');
-
-/*
-|--------------------------------------------------------------------------
 | Your application routes
 |--------------------------------------------------------------------------
 |
