@@ -1,0 +1,29 @@
+increments: false
+remember_token: true
+
+columns:
+  name: string
+  email:
+    type: string
+    unique: true
+  email_verified_at:
+    type: timestamp
+    nullable: true
+    useCurrent: true
+    useCurrentOnUpdate: false
+  password: string
+  max_number:
+    type: integer
+    primary: true
+    unsigned: true
+
+seeds:
+  count: 5
+  truncate: true
+  model: App\Models\User
+  data:
+    name: 'faker:name'
+    email: 'faker:unique:safeEmail'
+    email_verified_at: 'tick:now'
+    password: 'hash:password'
+    remember_token: 'randomString:10'
