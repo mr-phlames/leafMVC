@@ -4,7 +4,7 @@
     <br><br>
 </p>
 
-# Leaf MVC
+# Leaf MVC 4.0
 
 [![Latest Stable Version](https://poser.pugx.org/leafs/mvc/v/stable)](https://packagist.org/packages/leafs/mvc)
 [![Total Downloads](https://poser.pugx.org/leafs/mvc/downloads)](https://packagist.org/packages/leafs/mvc)
@@ -39,31 +39,17 @@ Note that `<project-name>` is the name of the project you want to create, and th
 ```bash
 C:.
 ├───app
-│   ├───console
 │   ├───controllers
 │   ├───database
-│   │   ├───factories
-│   │   ├───migrations
-│   │   ├───schema
-│   │   └───seeds
-│   ├───helpers
 │   ├───models
 │   ├───routes
 │   └───views
 │       ├───css
 │       └───errors
-├───config
-├───lib
 ├───public
 │   └───assets
 │       ├───css
 │       └───img
-├───storage
-│   ├───app
-│   │   └───public
-│   ├───framework
-│   │   └───views
-│   └───logs
 └───vendor
 ```
 
@@ -75,16 +61,9 @@ To run your Leaf MVC application, use
 php leaf serve
 ```
 
-Or with the Leaf CLI
-
-```bash
-leaf serve
-```
-
 ## 📓 Learning Leaf MVC
 
-- Leaf MVC has a very easy to understand [documentation](https://leafphp.dev/docs/mvc/) which contains information on all operations in Leaf MVC.
-- Since Leaf MVC runs on Leaf, you should check out the Leaf PHP Framework documentation [here](https://leafphp.dev).
+- Leaf MVC is Leaf + an MVC wrapper, we provide a lot of [documenation](https://leafphp.dev/docs/mvc/) on how to use Leaf MVC.
 - You can also check out our [youtube channel](https://www.youtube.com/channel/UCllE-GsYy10RkxBUK0HIffw) which has video tutorials on different topics
 <!-- - We are also working on [codelabs](https://codelabs.leafphp.dev) which will bring hands-on tutorials you can follow and contribute to. -->
 
