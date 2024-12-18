@@ -63,7 +63,7 @@
         ],
         "dev": [
             "Composer\\Config::disableProcessTimeout",
-            "npx concurrently -c \"#3eaf7c,#bd34fe\" \"php leaf serve\" \"npm run dev\" --names=server,vite"
+            "@php leaf serve --ansi"
         ]
     },
     "config": {
