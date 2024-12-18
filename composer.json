@@ -1,30 +1,14 @@
 {
+    "$schema": "https://getcomposer.org/schema.json",
     "name": "leafs/mvc",
-    "version": "4.0-alpha",
     "description": "A lightweight PHP MVC framework powered by Leaf",
-    "type": "library",
+    "type": "project",
     "keywords": [
         "framework",
         "leaf",
-        "leafPHP",
-        "mvc",
-        "leaf mvc"
+        "mvc"
     ],
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Michael Darko",
-            "email": "mickdd22@gmail.com",
-            "homepage": "https://mychi.netlify.app",
-            "role": "Maintainer"
-        },
-        {
-            "name": "Abdulbasit Rubeya",
-            "email": "abdulbasitsultan4@gmail.com",
-            "homepage": "https://github.com/ibnsultan",
-            "role": "Maintainer"
-        }
-    ],
     "require": {
         "illuminate/console": "^8.75",
         "leafs/blade": "*",
@@ -34,7 +18,6 @@
         "leafs/aloe": "v2.x-dev"
     },
     "require-dev": {
-        "fakerphp/faker": "^1.16",
         "leafs/alchemy": "^2.0"
     },
     "autoload": {
@@ -70,13 +53,6 @@
             "app/database/migrations"
         ]
     },
-    "config": {
-        "optimize-autoloader": true,
-        "sort-packages": false,
-        "allow-plugins": {
-            "pestphp/pest-plugin": true
-        }
-    },
     "scripts": {
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
@@ -84,7 +60,18 @@
         ],
         "post-create-project-cmd": [
             "@php leaf key:generate"
+        ],
+        "dev": [
+            "Composer\\Config::disableProcessTimeout",
+            "npx concurrently -c \"#3eaf7c,#bd34fe\" \"php leaf serve\" \"npm run dev\" --names=server,vite"
         ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": false,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true
