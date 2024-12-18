@@ -1,6 +1,6 @@
 {
     "name": "leafs/mvc",
-    "version": "3.7",
+    "version": "4.0-alpha",
     "description": "A lightweight PHP MVC framework powered by Leaf",
     "type": "library",
     "keywords": [
@@ -30,14 +30,7 @@
         "leafs/blade": "*",
         "leafs/mvc-core": "dev-main",
         "leafs/leaf": "^3.7",
-        "leafs/csrf": "*",
         "leafs/logger": "*",
-        "leafs/cors": "*",
-        "leafs/auth": "^3.0",
-        "leafs/db": "*",
-        "leafs/vite": "*",
-        "leafs/form": "^3.0",
-        "leafs/http": "^3.0",
         "leafs/aloe": "v2.x-dev"
     },
     "require-dev": {
@@ -57,12 +50,14 @@
             "App\\Utils\\": "app/utils/",
             "App\\Events\\": "app/events/",
             "App\\Models\\": "app/models/",
+            "App\\Mailers\\": "app/mailers/",
             "App\\Workers\\": "app/workers/",
             "App\\Console\\": "app/console/",
             "App\\Scripts\\": "app/scripts/",
             "App\\Helpers\\": "app/helpers/",
             "App\\Channels\\": "app/channels/",
             "App\\Services\\": "app/services/",
+            "App\\Database\\": "app/database/",
             "App\\Middleware\\": "app/middleware/",
             "App\\Components\\": "app/components/",
             "App\\Controllers\\": "app/controllers/",
