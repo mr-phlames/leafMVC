@@ -96,8 +96,10 @@ To report a security vulnerability, you can reach out to [@mychidarko](https://t
 
 ## 🤩 Sponsoring Leaf
 
-We are committed to keeping Leaf open-source and free, but maintaining and developing new features now requires significant time and resources. As the project has grown, so have the costs, which have been mostly covered by the team. To sustain and grow Leaf, we need your help to support full-time maintainers.
+Leaf has always been open-source and free, but as the project grows, so do the challenges of maintaining and building new features. The costs—time, resources, and infrastructure—are increasing rapidly, and our small team can no longer sustain this alone.
 
-You can sponsor Leaf and any of our packages on [open collective](https://opencollective.com/leaf) or check the [contribution page](https://leafphp.dev/support/) for a list of ways to contribute.
+To keep Leaf alive and thriving, we need your support now more than ever. Sponsor us on [GitHub Sponsors](https://github.com/sponsors/leafsphp) or visit our [sponsors page](https://leafphp.dev/support/) to explore ways you can contribute.
+
+Your help makes all the difference—let’s keep Leaf moving forward together!
 
 And to all our [existing cash/code contributors](https://leafphp.dev#sponsors), we love you all ❤️
