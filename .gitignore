@@ -14,7 +14,11 @@ dist
 compiled
 
 # System/Editor
+.fleet
 .idea
+.nova
+.vscode
+.zed
 
 # Leaf
 .hana
@@ -23,6 +27,7 @@ hot
 storage/framework
 storage/logs
 storage/database
+public/storage
 
 # Logs
 npm-debug.log

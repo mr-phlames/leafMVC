@@ -12,10 +12,10 @@
     "require": {
         "illuminate/console": "^8.75",
         "leafs/blade": "*",
-        "leafs/mvc-core": "dev-main",
+        "leafs/mvc-core": "v4.x-dev",
         "leafs/leaf": "^3.7",
         "leafs/logger": "*",
-        "leafs/aloe": "v2.x-dev"
+        "leafs/aloe": "v4.x-dev"
     },
     "require-dev": {
         "leafs/alchemy": "^2.0"
