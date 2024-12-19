@@ -7,6 +7,8 @@ Things you may want to cover:
 
 ## App Info
 
+Created with Leaf MVC v4 + Leaf v3
+
 ## Installation
 
 ## System dependencies
