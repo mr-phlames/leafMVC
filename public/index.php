@@ -58,18 +58,6 @@ if (php_sapi_name() === 'cli-server') {
 
 /*
 |--------------------------------------------------------------------------
-| Attach blade view
-|--------------------------------------------------------------------------
-|
-| Since blade no longer ships with Leaf by default, we
-| can attach blade back to Leaf so you can use Leaf MVC
-| as you've always used it.
-|
-*/
-Leaf\Config::attachView(\Leaf\Blade::class);
-
-/*
-|--------------------------------------------------------------------------
 | Load Leaf configuration
 |--------------------------------------------------------------------------
 |
@@ -80,37 +68,6 @@ Leaf\Config::attachView(\Leaf\Blade::class);
 |
 */
 Leaf\Core::loadApplicationConfig();
-
-/*
-|--------------------------------------------------------------------------
-| Sync Leaf Db with ORM and connect
-|--------------------------------------------------------------------------
-|
-| Sync Leaf Db with ORM and connect to the database
-| This allows you to use Leaf Db without having
-| to initialize it in your controllers.
-|
-| If you want to use a different connection from those
-| used in your models, you can remove the line below and
-| add your own connection with:
-| db()->connect(...)
-|
-| **Uncomment the line below to use Leaf Db**
-| **You don't need this line to use Leaf Auth**
-*/
-// \Leaf\Database::initDb();
-
-/*
-|--------------------------------------------------------------------------
-| Load custom libraries
-|--------------------------------------------------------------------------
-|
-| You can load your custom libraries here. If you have
-| anything defined in your lib folder, you can load
-| them here. Simply uncomment the line below.
-|
-*/
-// \Leaf\Core::loadLibs();
 
 /*
 |--------------------------------------------------------------------------
