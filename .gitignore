@@ -22,6 +22,8 @@ compiled
 hot
 storage/framework
 storage/logs
+storage/database
+storage/cache
 
 # Logs
 npm-debug.log
