@@ -10,7 +10,6 @@
     ],
     "license": "MIT",
     "require": {
-        "illuminate/console": "^8.75",
         "leafs/blade": "*",
         "leafs/mvc-core": "v4.x-dev",
         "leafs/leaf": "^3.7",
