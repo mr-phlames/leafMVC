@@ -18,11 +18,12 @@
 
         Be sure to run `npm install` and then `npm run dev` or `npm run build` first.
     --}}
-    {{-- {{ vite('css/app.css') }} --}}
+    {{-- @vite('css/app.css') --}}
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700;display=swap">
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    @alpine
 </head>
 
 <body class="overflow-hidden">
