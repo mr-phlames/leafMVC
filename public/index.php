@@ -58,19 +58,6 @@ if (php_sapi_name() === 'cli-server') {
 
 /*
 |--------------------------------------------------------------------------
-| Load Leaf configuration
-|--------------------------------------------------------------------------
-|
-| Leaf MVC allows you to customize Leaf and it's modules using
-| configuration files defined in the config folder. This line
-| loads the configuration files and makes them available to
-| your application.
-|
-*/
-Leaf\Core::loadApplicationConfig();
-
-/*
-|--------------------------------------------------------------------------
 | Run your Leaf MVC application
 |--------------------------------------------------------------------------
 |

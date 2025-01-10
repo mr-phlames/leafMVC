@@ -17,7 +17,8 @@
         "leafs/aloe": "v4.x-dev"
     },
     "require-dev": {
-        "leafs/alchemy": "^2.0"
+        "leafs/alchemy": "^2.0",
+        "fakerphp/faker": "^1.24"
     },
     "autoload": {
         "psr-4": {
