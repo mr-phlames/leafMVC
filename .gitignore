@@ -1,8 +1,34 @@
+# Packages
+composer.phar
 vendor
-composer.lock
-.env
 node_modules
+
+# Environment
+.env
+.env.backup
+.env.production
+
+# Build
 build
 dist
 compiled
+
+# System/Editor
+.fleet
 .idea
+.nova
+.vscode
+.zed
+
+# Leaf
+.hana
+.alchemy
+hot
+storage/framework
+storage/logs
+storage/database
+public/storage
+
+# Logs
+npm-debug.log
+yarn-error.log

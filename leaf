@@ -1,5 +1,6 @@
 #!/usr/bin/env php
 <?php
+
 /*
 |--------------------------------------------------------------------------
 | Register The Auto Loader
@@ -11,17 +12,7 @@
 | loading of any our classes "manually". Feels great to relax.
 |
 */
-require __DIR__.'/vendor/autoload.php';
-
-/*
-|--------------------------------------------------------------------------
-| Register The Leaf Command Auto Loader
-|--------------------------------------------------------------------------
-|
-| Require all the files containing the Leaf Commands
-|
-*/
-require __DIR__.'/config/bootstrap.php';
+require __DIR__ . '/vendor/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -31,34 +22,19 @@ require __DIR__.'/config/bootstrap.php';
 | Quickly use our environment variables
 |
 */
-\Dotenv\Dotenv::create(__DIR__)->load();
+try {
+    \Dotenv\Dotenv::createUnsafeImmutable(__DIR__)->load();
+} catch (\Throwable $th) {
+    trigger_error($th);
+}
 
 /*
 |--------------------------------------------------------------------------
-| Initialise Leaf CMD
+| Boot Aloe Console
 |--------------------------------------------------------------------------
 |
-| Initialise pre-defined console commands
+| Automatically load your config, paths and commands,
+| and then run the console application.
 |
 */
-$console = new \Config\Console;
-
-/*
-|--------------------------------------------------------------------------
-| Add custom command
-|--------------------------------------------------------------------------
-|
-| If you have a new command to add to Leaf
-|
-*/
-$console->registerCustom(new \App\Console\ExampleCommand());
-
-/*
-|--------------------------------------------------------------------------
-| Run The console Application
-|--------------------------------------------------------------------------
-|
-| Transport water and dissolved substances to the rest of Leaf😂
-|
-*/
-$console->run();
+Leaf\Core::loadConsole();
