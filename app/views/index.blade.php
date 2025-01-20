@@ -6,21 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ _env('APP_NAME', 'My Leaf MVC App') }}</title>
     <link rel="shortcut icon" href="https://leafphp.dev/logo-circle.png" type="image/x-icon">
+    <link rel="stylesheet" href="@assets('css/styles.css')">
 
-    @vite('css/app.css')
+    {{-- @vite('css/app.css') --}}
 
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700;display=swap">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
+        rel="stylesheet">
 
     @alpine
 </head>
 
 <body
-    class="font-sans antialiased bg-gradient-to-br from-transparent via-white to-green-100 dark:from-[#102e36] dark:via-[#001318] dark:to-[#001318] dark:text-white/50">
+    class="antialiased bg-gradient-to-br from-transparent via-white to-green-100 dark:from-[#102e36] dark:via-[#001318] dark:to-[#001318] dark:text-white/50">
     <div class="text-black/50 dark:text-white/50 flex flex-col justify-between items-center min-h-screen">
-        @include('components.topnav')
+        @includeIf('components.topnav')
 
-        <main class="py-10 max-w-7xl mx-auto px-4 sm:px-0">
+        <div class="-mt-10"></div>
+
+        <main class="py-10 max-w-7xl mx-auto px-4 xl:px-0">
             <div class="grid gap-6 lg:grid-cols-2 lg:gap-8">
                 <a href="https://leafphp.dev/docs/" id="docs-card"
                     class="gradient-border flex flex-col items-start gap-6 overflow-hidden rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-[#42d392]/40 focus:outline-none focus-visible:ring-[#3eaf7c] md:row-span-3 lg:p-10 lg:pb-10 dark:bg-[#001e26] dark:ring-gray-800 dark:hover:text-white/70 dark:focus-visible:ring-[#3eaf7c]">
